@@ -1397,6 +1397,43 @@ def net_autostart(network, extra="", **dargs):
     """
     return command("net-autostart %s %s" % (network, extra), **dargs)
 
+def iface_list(options, extra="", **dargs):
+    """
+    List interfaces on host.
+
+    @param: options: options to pass to command
+    @param: extra: extra parameters to pass to command
+    @param: dargs: standardized virsh function API keywords
+    @return: CmdResult object
+    """
+    return command("iface-list %s" % (options), **dargs)
+
+def iface_mac(options, extra="", **dargs):
+    """
+    List interfaces on host.
+
+    @param: options: options to pass to command
+    @param: extra: extra parameters to pass to command
+    @param: dargs: standardized virsh function API keywords
+    @return: CmdResult object
+    """
+    return command("iface-mac %s" % (options), **dargs)
+
+def iface_name(options, extra="", **dargs):
+    """
+    List interfaces on host.
+
+    @param: options: options to pass to command
+    @param: extra: extra parameters to pass to command
+    @param: dargs: standardized virsh function API keywords
+    @return: CmdResult object
+    """
+    return command("iface-name %s" % (options), **dargs)
+
+
+
+
+
 
 def pool_info(name, **dargs):
     """
